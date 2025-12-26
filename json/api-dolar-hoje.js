@@ -5,7 +5,7 @@ fetch ("https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados/ultimos/1?formato=
 .then (resposta => resposta.json())
 .then (dados => {
     const dolarhoje = dados[0]
-    preco.innerText = new Intl.NumberFormat("pt-BR", {
+    preco.innerText = "US$ 1,00" + " = " + new Intl.NumberFormat("pt-BR", {
     style: "currency",
     currency: "BRL",
     minimumFractionDigits: 3,
